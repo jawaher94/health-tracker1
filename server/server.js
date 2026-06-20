@@ -29,9 +29,9 @@ app.post("/generate-plan", async (req, res) => {
     const response = await fetch(url, {
       method: "GET",
       headers: {
-        "X-RapidAPI-Key": "b6121c4937mshb43b78e68f7239ep118d68jsn49cc469bd92b",
-        "X-RapidAPI-Host": "exercisedb.p.rapidapi.com"
-      }
+      "X-RapidAPI-Key": process.env.RAPIDAPI_KEY,
+      "X-RapidAPI-Host": "exercisedb.p.rapidapi.com"
+}
     });
 
     const data = await response.json();
@@ -73,8 +73,10 @@ app.post("/generate-plan", async (req, res) => {
 });
   
 
-app.listen(5000, () => {
-  console.log("Server running on http://localhost:5000");
+const PORT = process.env.PORT || 5000;
+
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
 });
 
 // b6121c4937mshb43b78e68f7239ep118d68jsn49cc469bd92b
