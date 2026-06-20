@@ -16,7 +16,7 @@ export default function PlanDetails() {
     try {
       setLoading(true);
 
-      const response = await fetch("http://localhost:5000/generate-plan", {
+      const response = await fetch(" https://health-tracker-cbjq.onrender.com/generate-plan", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
