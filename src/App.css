@@ -1,0 +1,57 @@
+#root {
+  min-height: 100vh;
+}
+
+/* شريط التنقل */
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 15px;
+  background: #ffffff;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* عناصر التنقل */
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+}
+
+/* الأيقونات */
+.material-icons {
+  font-size: 30px;
+}
+/* تأثير عند مرور الماوس على الأيقونات */
+.nav-item:hover {
+  color: green;
+}
+
+.nav-item:hover .material-icons {
+  color: green;
+}
+
+
+/* ترتيب الكروت بجانب بعض */
+.cards-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+
+/* شكل كل كرت */
+.card {
+  width: 300px;
+}
+.cards-grid {
+  display: flex;
+  
+  gap: 20px;
+ flex-wrap: nowrap;
+}

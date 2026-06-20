@@ -1,0 +1,45 @@
+.health-card {
+  background: white;
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  color: #4CAF50;
+}
+
+.card-value {
+  font-size: 22px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+/* ===== Bar Charts ===== */
+.mini-bars {
+  display: flex;
+  align-items: flex-end;
+  height: 45px;
+  gap: 6px;
+  border-left: 3px solid #c8e6c9;
+  border-bottom: 3px solid #c8e6c9;
+  padding-left: 6px;
+  padding-bottom: 4px;
+}
+
+.bar {
+  width: 8px;
+  border-radius: 6px;
+  background: #4CAF50;
+}
+
+/* ===== Blood Pressure ===== */
+.bp-note {
+  font-size: 14px;
+  color: #4CAF50;
+  font-weight: 500;
+}
