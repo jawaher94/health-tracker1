@@ -1,16 +1,16 @@
 import { useEffect, useState } from "react";
 import HealthCard from "../components/HealthCard";
 import WeeklyProgress from "../components/WeeklyProgress";
-import HealthSetup from "../components/HealthSetup"; // ✅ أضفناه
+import HealthSetup from "../components/HealthSetup"; 
 import { getHealthData } from "../services/healthService";
 
 function Home({ user }) {
 
   const [healthData, setHealthData] = useState(null);
   const [loading, setLoading] = useState(true);
-  const [showSetup, setShowSetup] = useState(false); // ✅ جديد
+  const [showSetup, setShowSetup] = useState(false); 
 
-  // ✨ رسالة ترحيب
+  
   const getGreeting = () => {
     const hour = new Date().getHours();
     if (hour < 12) return "Good Morning";
@@ -18,7 +18,6 @@ function Home({ user }) {
     return "Good Evening";
   };
 
-  // 🔥 جلب البيانات
 useEffect(() => {
   const fetchData = async () => {
     try {
@@ -26,15 +25,13 @@ useEffect(() => {
 
       console.log("FIREBASE DATA:", data);
 
-      // ✅ إذا لا يوجد document أصلاً
+    
       if (!data) {
         setShowSetup(true);
       }
-      // ✅ يوجد document لكن بدون health
       else if (!data.health) {
         setShowSetup(true);
       }
-      // ✅ يوجد health → مستخدم قديم
       else {
         setHealthData(data.health);
       }
@@ -49,12 +46,10 @@ useEffect(() => {
   fetchData();
 }, [user.uid]);
 
-  // ⏳ تحميل
   if (loading) {
     return <p>Loading your dashboard...</p>;
   }
 
-  // 🔥 عرض فورم الإدخال لأول مرة
   if (showSetup) {
     return (
       <HealthSetup
@@ -68,7 +63,6 @@ useEffect(() => {
     );
   }
 
-  // 🤖 توصيات AI
   const getAIRecommendations = (data) => {
     const tips = [];
 

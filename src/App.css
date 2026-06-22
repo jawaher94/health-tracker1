@@ -2,7 +2,6 @@
   min-height: 100vh;
 }
 
-/* شريط التنقل */
 .navbar {
   display: flex;
   justify-content: space-around;
@@ -12,7 +11,6 @@
   box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
-/* عناصر التنقل */
 .nav-item {
   display: flex;
   flex-direction: column;
@@ -22,11 +20,9 @@
   font-size: 14px;
 }
 
-/* الأيقونات */
 .material-icons {
   font-size: 30px;
 }
-/* تأثير عند مرور الماوس على الأيقونات */
 .nav-item:hover {
   color: green;
 }
@@ -36,7 +32,6 @@
 }
 
 
-/* ترتيب الكروت بجانب بعض */
 .cards-container {
   display: flex;
   gap: 20px;
@@ -45,7 +40,7 @@
 }
 
 
-/* شكل كل كرت */
+
 .card {
   width: 300px;
 }

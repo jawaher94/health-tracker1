@@ -20,7 +20,6 @@ function Profile({ user, isNewUser,isEditing,setIsEditing, finishProfile,setUser
     
   };
 
-  // ✅ Logout function (مضاف)
   const handleLogout = async () => {
     try {
       await signOut(auth);
@@ -33,7 +32,7 @@ function Profile({ user, isNewUser,isEditing,setIsEditing, finishProfile,setUser
 
 
   useEffect(() => {
-  if (!user) return; // 🔥 حماية
+  if (!user) return; 
 
   const fetchProfile = async () => {
     const docRef = doc(db, "users", user.uid);

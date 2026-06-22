@@ -26,12 +26,12 @@ function App() {
 
   const handleLogin = (loggedUser) => {
     setUser(loggedUser);
-    setIsNewUser(false); // ✅ تعديل مهم
+    setIsNewUser(false);
   };
 
   const handleRegister = (newUser, isNew) => {
     setUser(newUser);
-    setIsNewUser(isNew); // ✅ استخدام القيمة القادمة
+    setIsNewUser(isNew); 
 
     navigate("/profile");
   };
@@ -47,12 +47,12 @@ function App() {
 
         <Route
           path="/login"
-          element={<Login onLogin={handleLogin} />} // ✅ إصلاح
+          element={<Login onLogin={handleLogin} />} 
         />
 
         <Route
           path="/register"
-          element={<Register onRegister={handleRegister} />} // ✅ إصلاح
+          element={<Register onRegister={handleRegister} />} 
         />
 
       </Routes>
@@ -110,7 +110,7 @@ function App() {
 
   <Route path="/plans" element={<Plans user={user} />} />
 
-  {/* ⭐ هذا هو التعديل */}
+
   
 <Route path="/plan/:id" element={<PlanDetails />} />
 

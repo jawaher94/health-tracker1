@@ -51,7 +51,6 @@ export default function Plan() {
     <div style={{ padding: "20px" }}>
       <h2 style={{ marginBottom: "20px" }}>Health Plans</h2>
 
-      {/* 🟢 كل البطاقات تحت بعض */}
       <div>
         {plans.map((plan) => (
           <div
@@ -67,12 +66,10 @@ export default function Plan() {
               transition: "0.3s"
             }}
           >
-            {/* 🟢 عنوان أخضر */}
             <h3 style={{ color: "green", marginBottom: "8px" }}>
               {plan.title}
             </h3>
 
-            {/* 🟡 وصف الخطة */}
             <p style={{ color: "#555", margin: 0 }}>
               {plan.description}
             </p>

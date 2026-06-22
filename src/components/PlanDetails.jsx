@@ -16,7 +16,8 @@ export default function PlanDetails() {
     try {
       setLoading(true);
 
-      const response = await fetch(" https://health-tracker-cbjq.onrender.com/generate-plan", {
+      const response = await fetch(
+      " https://health-tracker-cbjq.onrender.com/generate-plan", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
@@ -43,12 +44,12 @@ export default function PlanDetails() {
   return (
     <div style={{ padding: "20px" }}>
       
-      {/* 🟢 عنوان واضح وأخضر */}
+   
       <h2 style={{ color: "green" }}>
         AI Health Plan - {id}
       </h2>
 
-      {/* 🧠 عرض الخطة بشكل مرتب */}
+     
       <div
         style={{
           background: "#f9f9f9",
@@ -62,7 +63,6 @@ export default function PlanDetails() {
         {plan}
       </div>
 
-      {/* أزرار */}
       <div style={{ marginTop: "20px" }}>
         
         <button

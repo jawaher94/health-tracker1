@@ -30,15 +30,15 @@
 }
 
 .day-name {
-  font-weight: 700; /* خط أرفع */
-  color: #4CAF50; /* أخضر */
+  font-weight: 700; 
+  color: #4CAF50;
   margin-bottom: 6px;
 }
 
 .calendar-day {
   width: 42px;
   height: 42px;
-  border-radius: 50%; /* دائرة */
+  border-radius: 50%; 
   background: #f5f5f5;
   display: flex;
   align-items: center;
@@ -53,7 +53,7 @@
 }
 
 .calendar-day.empty {
-  background: transparent; /* الأيام الفارغة */
+  background: transparent; 
 }
 
 .date {

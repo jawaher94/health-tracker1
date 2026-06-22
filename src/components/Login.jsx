@@ -2,7 +2,7 @@ import { useState } from "react";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../firebase/firebaseConfig.js";
 import { Link } from "react-router-dom";
-import "./formStyles.css"; // ملف CSS الموجود في نفس المجلد
+import "./formStyles.css"; 
 
 function Login({ onLogin }) {
   const [email, setEmail] = useState("");
@@ -10,12 +10,16 @@ function Login({ onLogin }) {
 
   const handleLogin = async () => {
     try {
-      const userCredential = await signInWithEmailAndPassword(auth, email, password);
+      const userCredential = await signInWithEmailAndPassword (
+      auth,
+      email, 
+      password);
 
       onLogin(userCredential.user);
 
     } catch (error) {
-      // نفس الكود عندك بدون حذف
+
+
     
 
   if (error.code === "auth/user-not-found") {

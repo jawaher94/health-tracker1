@@ -15,7 +15,7 @@ app.post("/generate-plan", async (req, res) => {
 
     let url = "";
 
-    // 🔥 اختيار نوع التمارين حسب الهدف
+    
     if (goal === "lose-weight") {
       url = "https://exercisedb.p.rapidapi.com/exercises/bodyPart/cardio";
     } else if (goal === "muscle") {
@@ -40,11 +40,10 @@ app.post("/generate-plan", async (req, res) => {
       throw new Error("No data");
     }
 
-    // 🔥 نختار تمارين عشوائية
     const shuffled = data.sort(() => 0.5 - Math.random());
     const exercises = shuffled.slice(0, 6);
 
-    // 🔥 نبني برنامج
+   
     let plan = `🔥 ${goal.toUpperCase()} PLAN\n\n`;
 
     plan += `📅 Day 1:\n`;

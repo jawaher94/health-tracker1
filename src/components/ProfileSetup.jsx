@@ -139,7 +139,6 @@ function ProfileSetup({ user, onComplete ,initialData}) {
       </button>
       
 
-      {/* زر التراجع */}
       <button
         className="submit-button"
         style={{ marginTop: "10px", backgroundColor: "#888" }}
